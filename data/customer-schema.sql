@@ -1,7 +1,7 @@
 
-DROP TABLE IF EXISTS `order_Customer`;
+DROP TABLE IF EXISTS `customer_Customer`;
 
-CREATE TABLE `order_Customer` (
+CREATE TABLE `customer_Customer` (
   `customerID` int(12) NOT NULL AUTO_INCREMENT,
   `siteID` int(12) NOT NULL,
   `creator` int(12) NOT NULL,
