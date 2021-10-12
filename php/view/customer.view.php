@@ -258,7 +258,7 @@ final class CustomerView {
 		$dac .= '
 
 			<div class="input-group">
-				<input id="' . $dmp->modalKey . '_text_input_id" type="text" class="customer-list-autocomplete form-control' . ($dmp->size?' form-control-'.$dmp->size:'') . '" value="' . $customerName . '">
+				<input id="' . $dmp->modalKey . '_text_input_id" type="text" class="customer-list-autocomplete form-control' . ($dmp->size?' form-control-'.$dmp->size:'') . '" value="' . $customerName . '" placeholder="' . Lang::getLang($dmp->placeholder) . '"' . ($dmp->required?' required':'') . '>
 				<div class="input-group-append">
 					<button id="' . $dmp->modalKey. '_btn_id" class="btn-customer-modal-trigger btn btn-outline-secondary' . ($dmp->size?' btn-'.$dmp->size:'') . '" type="button" tabindex="-1" data-toggle="modal" data-target="#customerReferenceFormModal">' . lang::getLang($dmp->customerModalButtonAnchor) . '</button>
 				</div>

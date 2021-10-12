@@ -189,6 +189,8 @@ final class CustomerModalParameters {
 	public $size;
 	public $fieldName;
 	public $includeModal;
+	public $placeholder;
+	public $required;
 	public $customerModalButtonAnchor;
 	public $modalKey;
 
@@ -198,6 +200,8 @@ final class CustomerModalParameters {
 		$this->size = null;
 		$this->fieldName = 'customerID';
 		$this->includeModal = true;
+		$this->placeholder = 'customer';
+		$this->required = false;
 		$this->customerModalButtonAnchor = 'customerModalButtonAnchor';
 		$this->modalKey = 'customer_modal';
 
