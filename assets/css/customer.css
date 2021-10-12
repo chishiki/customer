@@ -2,7 +2,18 @@
 /* general css goes here */
 /* this css is loaded AFTER perihelion and bootstrap css */
 
+.customer-modal-list-group a.list-group-item {
+    text-decoration: none;
+    cursor: default;
+}
 
+.customer-modal-list-group a.list-group-item:nth-child(odd) {
+    background-color: #eeeeee;
+}
+
+.customer-modal-list-group a.list-group-item:hover {
+    background-color: #dddddd;
+}
 
 /* breakpoint-specific css goes here */
 

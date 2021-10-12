@@ -276,7 +276,13 @@ final class CustomerView {
 		
 		$dl = new CustomerList();
 		$customers = $dl->customers();
-		
+
+		$items = '';
+		foreach ($customers AS $customerID) {
+			$d = new Customer($customerID);
+			$items .= '<a class="list-group-item" data-customerid="' . $customerID . '">' . $d->name() . '</a>';
+		}
+
 		$modal = '
 
 			<div class="modal fade" id="' . $modalID . '" tabindex="-1" role="dialog" aria-hidden="true">
@@ -289,16 +295,7 @@ final class CustomerView {
 							</button>
 						</div>
 						<div class="modal-body">
-							<ul class="list-group">
-								';
-								
-								foreach ($customers AS $customerID) {
-									$d = new Customer($customerID);
-									$modal .= '<a class="list-group-item" data-customerid="' . $customerID . '">' . $d->name() . '</a>';
-								}
-								
-								$modal .= '
-							</ul>
+							<ul class="list-group customer-modal-list-group">' . $items . '</ul>
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
